@@ -1,0 +1,1 @@
+DELETE FROM cache WHERE Hit_Count IN ( select Count from (select min(Hit_Count) as Count from cache) as temp)
